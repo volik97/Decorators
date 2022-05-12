@@ -12,7 +12,7 @@ def decoration_params(path='log.txt'):
             log = f'Function name: {func.__name__}\nResult: {result}\nDate: {datetime.now()} Time: {time_result} Args and Kwargs: {args}, {kwargs}\n{"*"*20}\n'
             with open(path, 'a+', encoding='utf-8') as logs:
                 logs.write(log)
-            return print('Successfully log!')
+            return result
         return wrapper
     return decorations
 
